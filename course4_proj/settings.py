@@ -38,6 +38,9 @@ class Dev(Configuration):
 
     OMDB_KEY = values.SecretValue()
 
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    ADMINS = [("admin", "a@a.com")]
+
     # Application definition
     INSTALLED_APPS = [
         'django.contrib.admin',
